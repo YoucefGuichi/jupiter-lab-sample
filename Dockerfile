@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN apt-get update && apt-get install -y gcc python3-dev
+RUN apt-get update && apt-get install -y gcc python3-dev nodejs npm
 
 RUN pip install jupyterlab
 RUN jupyter lab build --dev-build=True --minimize=True
