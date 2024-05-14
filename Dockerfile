@@ -2,7 +2,8 @@ FROM python:3.11.9-slim
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y gcc python3-dev nodejs npm
+RUN apt-get update && apt-get install -y curl && curl -fsSL https://deb.nodesource.com/setup_20.x | sh 
+RUN apt-get install -y  nodejs
 
 COPY . /app/
 
