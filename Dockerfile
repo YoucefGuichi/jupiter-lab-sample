@@ -12,5 +12,4 @@ RUN jupyter lab build --dev-build=True --minimize=True
 
 EXPOSE 8080
 
-
-CMD ["jupyter", "lab", "--port", "8080", "--allow-root"]
+CMD ["jupyter", "lab", "--port", "8080", "--allow-root", "--ip", "0.0.0.0"]
